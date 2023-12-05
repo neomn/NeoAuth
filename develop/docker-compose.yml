@@ -1,0 +1,8 @@
+services:
+
+  neo_auth:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./src:/myapp
