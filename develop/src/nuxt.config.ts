@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: [
     '@nuxtjs/tailwindcss',
-    '@vite-pwa/nuxt',
+    '@nuxtjs/pwa',
   ],
   pwa: {
     /* PWA options */
