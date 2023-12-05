@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div>
-
+  <div class="bg-lime-400">
+    test
   </div>
 </template>
