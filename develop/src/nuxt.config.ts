@@ -6,6 +6,11 @@ export default defineNuxtConfig({
   ],
   buildModules: ['@nuxtjs/pwa'],
   pwa: {
-    /* PWA options */
+    manifest: {
+      name: 'name',
+      description: "Desc",
+      theme_color: '#607D8B',
+      short_name: 'shortname'
+    },
   },
 })
