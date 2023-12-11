@@ -1,7 +1,3 @@
-<script setup>
-
-</script>
-
 <template>
   <div class="flex h-screen bg-gradient-to-br from-gray-600 to-gray-900">
     <VitePwaManifest/>
@@ -11,10 +7,24 @@
   </div>
 </template>
 
+
+
+
+<script setup>
+
+</script>
+
+
+
 <script>
 import { QrcodeStream, QrcodeDropZone, QrcodeCapture } from 'vue-qrcode-reader'
 
 export default {
+  data(){
+    return {
+      
+    }
+  },
   components: {
     QrcodeStream,
     QrcodeDropZone,
