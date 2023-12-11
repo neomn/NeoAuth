@@ -6,3 +6,5 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./src:/myapp
+    ports:
+      - 81:80
