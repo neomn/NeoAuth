@@ -9,13 +9,6 @@
 
 
 
-
-<script setup>
-
-</script>
-
-
-
 <script>
 import { QrcodeStream, QrcodeDropZone, QrcodeCapture } from 'vue-qrcode-reader'
 
@@ -30,10 +23,19 @@ export default {
     QrcodeDropZone,
     QrcodeCapture
   },
+  beforeMount() {
+    // startup ops
+  },
   methods: {
     onQrDetect(detectedCodes){
       console.log(detectedCodes) 
+      // read the origin
+      // if origin exists:
+      //    login ops
+      // else:
+      //    register ops
     },
+    
   },
 }
 </script>
