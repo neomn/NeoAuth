@@ -23,6 +23,7 @@
 ### 1- check app premissions
 ### 2- scan or read qr code data from camera or clipboard
 ### 3- determin the required operation is register or login
+
     + register operatoin: 
         * grant user permission to send required fields to the server
         * generate key pairs
