@@ -27,7 +27,6 @@ export default {
   beforeMount() {
     const router =  useRouter()
     startup_ops(router)
-    router.push('welcome')
   },
   methods: {
     onQrDetect(detectedCodes){

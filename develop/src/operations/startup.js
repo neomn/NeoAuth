@@ -1,7 +1,7 @@
 //operations which runs every time that app runs
 
 export function startup_ops(router){
-  if (false){
+  if (is_initial_run){
     console.log('this is initial run ')
     router.push('welcome')
   } else {
@@ -9,6 +9,6 @@ export function startup_ops(router){
   }
 }
 
-var is_initial_run = ()=>{return false}
+var is_initial_run = ()=>{return true}
 
 
