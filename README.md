@@ -5,17 +5,19 @@
 + if the app initiations are not done yet:
   * init operations
 + else:
-  * run normal work flow
+  * run routine work flow
 
 
-## 2- init operations:
+## 2- welcome operations:
++ introduce Neo AUth in few lines
++ explain for user and grant required permission permission
+
 + if there was files from previous installation:
-  * explain and get permissions
+    * explain and get permissions
     * read origins and user data
 + else:
-  * introduce Neo AUth in few lines
-    * grant file and camera permissions if not already granted
-    * setup directory path
+    * create app directory
+    * save initialized = true in local storage
     * get user data
 
 
