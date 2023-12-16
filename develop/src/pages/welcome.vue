@@ -13,5 +13,13 @@
     mounted() {
       welcomeOperations()
     },
+    methods: {
+      async grantRequiredPermissions(){
+        console.log('granting required permissions')
+        console.log( await navigator )
+        //const fileSystemPermission = await navigator.storage.query({name: 'presistent-storage'})
+        //console.log(fileSystemPermission)
+      }
+    },
   }
 </script>
