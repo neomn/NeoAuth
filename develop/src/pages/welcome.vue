@@ -8,10 +8,22 @@
 
 
 <script>
+  
   import {welcomeOperations} from '../operations/welcome.js'
+  import permissions from '../helpers/Permissions.js'
+  
   export default { 
     mounted() {
-      welcomeOperations()
+      // grant all permissions
+        // if all permissions not granted: retry or exit
+      
+      
+      // if previous installation: 
+        // read required data
+      // else : 
+        // setup 
+      
+      // redirect to home
     },
     methods: {
       async grantRequiredPermissions(){
@@ -19,7 +31,8 @@
         console.log( await navigator )
         //const fileSystemPermission = await navigator.storage.query({name: 'presistent-storage'})
         //console.log(fileSystemPermission)
-      }
+      },
+      
     },
   }
 </script>
