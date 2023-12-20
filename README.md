@@ -3,7 +3,7 @@
 
 ## 1- startup operations:
 + if the app initiations are not done yet:
-  * init operations
+  * welcome operations
 + else:
   * run routine work flow
 
@@ -11,9 +11,10 @@
 ## 2- welcome operations:
 + introduce Neo AUth in few lines
 + explain for user and grant required permission permission
+    * if all permissions not granted prompt the user if he/she want to 
+      retry or want to exit the app 
 
 + if there was files from previous installation:
-    * explain and get permissions
     * read origins and user data
 + else:
     * create app directory
@@ -24,7 +25,7 @@
 ## 3- routine operations:
 ### 3.1- check app premissions
 ### 3.2- scan or read qr code data from camera or clipboard
-### 3.3- determin the required operation is register or login
+### 3.3- determin the required operation is register operation or login operation
 
 + register operatoin: 
   * grant user permission to send required fields to the server
