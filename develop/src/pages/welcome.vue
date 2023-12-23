@@ -40,7 +40,12 @@
       readDataFromPreviousInstallation(){
         
       },
-     
+      runInitialSetupOperations(){
+        
+      },
+      exit(){
+        
+      },
     },
   }
 </script>
