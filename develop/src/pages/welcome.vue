@@ -34,7 +34,9 @@
       allPermissionsGranted(){
         
       },
-      
+      foundPreviousInstallation(){
+        
+      },
      
      
     },
