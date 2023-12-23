@@ -31,7 +31,9 @@
 
         return allPermissionsGranted
       },
-     
+      allPermissionsGranted(){
+        
+      },
       
      
      
