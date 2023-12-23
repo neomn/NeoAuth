@@ -28,6 +28,22 @@ export default {
     console.log('file:', file)
 
 
+    // grant camera permission if device has camera and already not granted
+    if (deviceHasCamera()){
+      navigator.permissions.query({name:'camera'}).then(result => {
+        if (result.state === 'granted') 
+          camera = true
+        else navigator.mediaDevices.getUserMedia({video: true}).then(result=>{
+          if (result.state === 'granted')
+            camera = true
+        })
+      })
+    }
+    console.log('camera:',camera)
     
+    console.log('grant permission result: ',((deviceHasCamera && camera && file && clipboard) || 
+                (!deviceHasCamera && file && clipboard))) 
+    return ((deviceHasCamera && camera && file && clipboard) || (!deviceHasCamera && file && clipboard))
+
   }
 }
