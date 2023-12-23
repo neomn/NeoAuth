@@ -15,7 +15,11 @@
   import permissions from '../helpers/Permissions.js'
   
   export default { 
-    
+    data() {
+      return {
+        first_atempt: true
+      }
+    },
     mounted() {
       useState('permissionsGranted', ()=>false)
     },
