@@ -1,26 +1,21 @@
-const REQUIRED_PERMISSIONS = [
-  'camera',
-  'file',
-  'clipboard',
-]
+function deviceHasCamera() {
+  return !!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia);
+}
 
 export default {
   
-  grantAllPermissions(){
-    // for p in permissions:
-      // if p not granted yet:
-        // if status not granted:
-          // return false
+  async grantRequiredPermissions(){
+    let camera = false, clipboard = false, file = false
     
-    //return true
 
-    // REQUIRED_PERMISSIONS.forEach(element => {
-    //   console.log('granting ', element, " permission")
-    // });
-    // return this.getNotGrantedPermissions() ? false : true;
-  },
-  
-  getNotGrantedPermissions(){
-    return false
-  },
+    // grant clipboard permission if already not granted
+    navigator.permissions.query({name: 'clipboard-read'}).then(result => {  
+      if (result.state == 'granted')
+        clipboard = true
+      else navigator.clipboard.readText().then(() => { clipboard = true})
+    })
+    console.log('clipboard:',clipboard)
+
+    
+  }
 }
