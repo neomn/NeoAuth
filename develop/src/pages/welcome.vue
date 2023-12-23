@@ -16,7 +16,10 @@
   
   export default { 
     
-       methods: {
+    mounted() {
+      useState('permissionsGranted', ()=>false)
+    },
+    methods: {
       grantPermissions(){
         this.first_atempt = false
         allPermissionsGranted = permissions.grantRequiredPermissions() 
