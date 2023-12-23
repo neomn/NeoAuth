@@ -3,6 +3,8 @@
     
 
     <div class='flex border m-4 '>
+      <Button  @click="grantPermissions" text='Grant Permissions' class='text-gray-300 m-2'/>
+      <Button  @click="exit"             text='Exit'              class='text-gray-300 m-2' v-if="!first_atempt"/>
     </div>
   </div>
 </template>
