@@ -1,12 +1,8 @@
 <template>
-  <div class="h-screen flex flex-col justify-around items-center bg-gradient-to-br from-gray-600 to-gray-800">
+    <div class="h-screen flex flex-col justify-around items-center bg-gradient-to-br from-gray-600 to-gray-800">
     
 
-    <div class='flex border m-4 '>
-      <Button  @click="grantPermissions" text='Grant Permissions' class='text-gray-300 m-2'/>
-      <Button  @click="exit"             text='Exit'              class='text-gray-300 m-2' v-if="!first_atempt"/>
     </div>
-  </div>
 </template>
 
 
@@ -18,43 +14,43 @@
   
   export default { 
     data() {
-      return {
-        first_atempt: true
-      }
+        return {
+            first_atempt: true
+        }
     },
     mounted() {
-      useState('permissionsGranted', ()=>false)
+        useState('permissionsGranted', ()=>false)
     },
     methods: {
-      grantPermissions(){
-        this.first_atempt = false
-        allPermissionsGranted = permissions.grantRequiredPermissions() 
-        while (!allPermissionsGranted){
-          allPermissionsGranted = permissions.grantRequiredPermissions() 
-          if (allPermissionsGranted){
-            console.log('all permissions granted successfully')
-            break
-          }
-          // show retry or exit 
-        }
+        grantPermissions(){
+            this.first_atempt = false
+            allPermissionsGranted = permissions.grantRequiredPermissions() 
+            while (!allPermissionsGranted){
+              allPermissionsGranted = permissions.grantRequiredPermissions() 
+              if (allPermissionsGranted){
+                console.log('all permissions granted successfully')
+                break
+              }
+              // show retry or exit 
+            }
 
-        return allPermissionsGranted
-      },
-      allPermissionsGranted(){
-        
-      },
-      foundPreviousInstallation(){
-        
-      },
-      readDataFromPreviousInstallation(){
-        
-      },
-      runInitialSetupOperations(){
-        
-      },
-      exit(){
-        
-      },
+            return allPermissionsGranted
+        },
+        allPermissionsGranted(){
+          
+        },
+        foundPreviousInstallation(){
+          
+        },
+        readDataFromPreviousInstallation(){
+          
+        },
+        runInitialSetupOperations(){
+          
+        },
+        exit(){
+          
+        },
     },
   }
 </script>
