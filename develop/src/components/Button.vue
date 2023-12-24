@@ -1,6 +1,6 @@
 <template>
-  <div class='border'>
-    <button>
+  <div>
+    <button class='w-full text-center border rounded-lg p-1'>
       {{text}}
     </button>
   </div>
