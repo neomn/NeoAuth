@@ -26,6 +26,11 @@
         useState('permissionsGranted', ()=>false)
     },
     methods: {
+        setupStoragePath(){
+            showDirectoryPicker().then(res=>{
+                console.log(res)
+            }) 
+        },
         grantPermissions(){
             this.first_atempt = false
             allPermissionsGranted = permissions.grantRequiredPermissions() 
