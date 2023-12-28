@@ -27,14 +27,17 @@
     },
     methods: {
         async setupStoragePath(){
-            const dirHandle = await window.showDirectoryPicker().catch(err=>console.log(err))
-            console.log(dirHandle)
-            const dir = await dirHandle.resolve()
-            console.log(dir)
-            const exists = await dir.queryEntryHandle('NeoAuth');
-            if (!exists) 
-                await dir.getDirectoryHandle('NeoAuth', {create: true}).catch(err=>console.log(err)) 
-            const file = await dir.getFileHandle('data.json').catch(err=>console.log(err))
+           //const dirHandle = await window.showDirectoryPicker().catch(err=>console.log(err))
+           //console.log(dirHandle)
+           //const dir = await dirHandle.resolve()
+           //console.log(dir)
+           //const exists = await dir.queryEntryHandle('NeoAuth');
+           //if (!exists) 
+           //    await dir.getDirectoryHandle('NeoAuth', {create: true}).catch(err=>console.log(err)) 
+           //const file = await dir.getFileHandle('data.json').catch(err=>console.log(err))
+            const handle = await window.showDirectoryPicker({mode: 'readwrite'})
+            const fs = await navigator.filesystem.requestDirectory({path: handle, grantMode: 'readwrite'}).catch(err=>{console.log(err)})
+            
         },
         grantPermissions(){
             this.first_atempt = false
